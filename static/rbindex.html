@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+      <link rel="stylesheet" href="stylo.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+      <script src="app.js"></script>
+   </head>
+   <body>
+      <div id="particles-js"></div>
+
+      <div id="note">
+         <h2 id="bigtext">Powered by MexiWeb</h2>
+         <h3>click the button below to load roblox</h3>
+         
+         <div class="button-container">
+            <button class="custom-button" id="proxy-button">Start</button>
+         </div>
+      </div>
+
+      <script src="uv/uv.bundle.js" defer></script>
+      <script src="uv/uv.config.js" defer></script>
+      <script>
+         document.getElementById('proxy-button').addEventListener('click', function() {
+            const uv = window.__uv$config.prefix;
+            const proxiedUrl = uv + __uv$config.encodeUrl("https://nowgg.lol");
+            window.location.href = proxiedUrl;
+         });
+      </script>
+   </body>
+</html>
